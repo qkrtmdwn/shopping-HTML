@@ -1,0 +1,62 @@
+*{margin: 0; padding: 0;}
+ul,li{list-style: none;}
+a{text-decoration: none; color: #222328;}
+.cf:after{content: ''; display: block; clear: both;}
+.hidden{display: none; overflow: hidden; position: absolute; left: -100000px; text-indent: -10000px;}
+
+#wrap{width: 1200px; height: 700px; margin: 0 auto; }
+header{width: 1200px; height: 100px; position: relative;}
+h1.logo{width: 200px; height: 50px; line-height: 100px;}
+
+.menu{position: absolute; right: 0px; top: 25px; width: 800px; height: 50px; }
+.menu li{float: left; width: 25%; height: 50px;}
+.menu li a{display: block; text-align: center; line-height: 50px; font-size: 18px; font-weight: bold; transition: all 0.5s;}
+.menu li:hover>a{background-color: crimson; color: #ffffff;}
+.menu li .sub{width: 100%; height: 200px; display: none;}
+.menu li .sub li{width: 100%; height: 50px; background-color: #dfdfdf; z-index: 100;}
+.menu li .sub li a:hover{color: #FFFFFF;}
+
+section{width: 1200px; height: 500px; position: relative;}
+#banner{width: 1200px; height: 300px; position: relative; overflow: hidden;}
+#banner ul li{position: absolute; top: 100%; width: 100%; height: 100%;}
+#banner ul li.first{top: 0%;}
+
+#contents{width: 1200px; height: 190px; padding-top: 10px;}
+#contents .content{width: 390px; float: left; padding: 0px 5px;}
+.tab{overflow: hidden;}
+.tab li{width: 100px; height: 40px; background: #ffffff; border: 1px solid crimson;
+box-sizing: border-box; float: left;}
+.tab li.active{background-color: crimson; color: #ffffff;}
+.tab li a{display: block; text-align: center; font-size: 16px; font-weight: bold; line-height: 40px;}
+.tab li.active>a{color: #ffffff}
+.tab_content{width: 380px; height: 140px; position: relative; background: #ffffff; border: 1px solid crimson;
+box-sizing: border-box; padding: 5px;}
+.tab_content .notice{position: absolute; background-color: #ffffff;}
+.tab_content .notice ul li{width: 360px; line-height: 150%;}
+.tab_content .notice ul li a{display: block; font-size: 14px; width: 280px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; float: left;}
+.tab_content .notice ul li span{display: block; font-size: 14px; width: 70px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; float: right;}
+.tab_content .gallery{position:  absolute; background-color: #ffffff;}
+.tab_content .gallery ul li{float: left; margin: 10px 5px;}
+.tab_content .gallery ul li a img{width: 100px;}
+
+.content .event li{float: left; margin: 0px 5px;}
+
+footer{width: 1200px; height: 100px; background-color: #FFFFFF;}
+.f_logo{width: 200px; height: 40px; line-height: 100px; float: left;}
+.f_copy{width: 800px; float: left; margin-top: 20px;}
+.f_copy ul li{margin-left: 20px; font-size: 14px;}
+.f_sns{width: 200px; float: left; margin-top: 20px;}
+.f_sns ul li{float: right;}
+.f_sns ul li{background: url(../img/social_icon1.jpg) no-repeat;
+width: 50px; height: 30px; background-size: 100%;}
+.f_sns ul li.fackbook{ background-position: 0px -60px;}
+.f_sns ul li.twitter{ background-position: 0px -30px;}
+.f_sns ul li.youtube{ background-position: 0px -85px;}
+
+#popup{background: rgba(0,0,0,0.3); width: 100%; height: 100%; position: absolute;
+left: 0; top: 0; z-index: 100; display: none;}
+.pop{width: 400px; height: 500px; position: absolute; top: 50%; left: 50%; 
+margin-top: -250px; margin-left: -200px; background: #ffffff;}
+.pop h1, .pop h3, .pop p{text-align: center; line-height: 200%;}
+.pop .button{width: 100px; height: 60px; position: absolute; right: 5px;
+bottom: 5px;}
