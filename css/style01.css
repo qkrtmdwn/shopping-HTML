@@ -1,69 +1,62 @@
 *{margin: 0; padding: 0;}
 ul,li{list-style: none;}
-a{text-decoration: none; color: #333333; font-family: '맑은 고딕', Arial, Helvetica, sans-serif;}
-cf:after{content: ''; display: block; clear: both;}
-.hidden{display: none; opacity: 0; position: absolute; left: -10000px; text-indent: -10000px;}
+a{text-decoration: none; color: #222328;}
+.cf:after{content: ''; display: block; clear: both;}
+.hidden{display: none; overflow: hidden; position: absolute; left: -100000px; text-indent: -10000px;}
 
-#wrap{width: 100%; height: 700px; background-color: #ffffff;}
-header{width: 100%; height: 100px; background-color: #0076be;}
-section{width: 1200px; height: 500px; margin: 0 auto;}
-footer{width: 100%; height: 100px; background-color: #999999;}
+#wrap{width: 1200px; height: 700px; margin: 0 auto; }
+header{width: 1200px; height: 100px; position: relative;}
+h1.logo{width: 200px; height: 50px; line-height: 100px;}
 
-#header{width: 1200px; margin: 0 auto; height: 100%;}
-.logo{width: 200px; float: left; margin-top: 25px;}
-.nav{float: right; margin-top: 25px; width: 800px; }
-.nav li{float: left; width: 25%; height: 50px; position: relative;}
-.nav li a{display: block; font-weight: bold; text-align: center; 
-line-height: 50px; font-size: 18px; color: #ffffff;}
-.nav li:hover a{background-color: #ffffff; color: #0076be; transition: all 0.5s;}
-.nav li .sub{height: 200px; width: 100%; position: absolute; left: 0px;
-z-index: 100; background-color: #ffffff; display: none;}
-.nav li .sub li{width: 100%; height: 50px;}
-.nav li .sub li a{color: #333333; font-weight: normal; font-size: 16px;}
-.nav li .sub li a:hover{background-color: #ff9326; color: #ffffff;}
+.menu{position: absolute; right: 0px; top: 25px; width: 800px; height: 50px; }
+.menu li{float: left; width: 25%; height: 50px;}
+.menu li a{display: block; text-align: center; line-height: 50px; font-size: 18px; font-weight: bold; transition: all 0.5s;}
+.menu li:hover>a{background-color: crimson; color: #ffffff;}
+.menu li .sub{width: 100%; height: 200px; display: none;}
+.menu li .sub li{width: 100%; height: 50px; background-color: #dfdfdf; z-index: 100;}
+.menu li .sub li a:hover{color: #FFFFFF;}
 
-#banner{width: 100%; height: 300px; position: relative; overflow: hidden;}
-#banner ul li{position: absolute; left: 100%; opacity: 0;}
-#banner ul li.first{left: 0%; opacity: 1;}
+section{width: 1200px; height: 500px; position: relative;}
+#banner{width: 1200px; height: 300px; position: relative; overflow: hidden;}
+#banner ul li{position: absolute; top: 100%; width: 100%; height: 100%;}
+#banner ul li.first{top: 0%;}
 
-#contents{width: 100%; height: 200px;}
-#contents .contnet{float: left; width: 380px; height: 180px; padding: 10px;}
+#contents{width: 1200px; height: 190px; padding-top: 10px;}
+#contents .content{width: 390px; float: left; padding: 0px 5px;}
+.tab{overflow: hidden;}
+.tab li{width: 100px; height: 40px; background: #ffffff; border: 1px solid crimson;
+box-sizing: border-box; float: left;}
+.tab li.active{background-color: crimson; color: #ffffff;}
+.tab li a{display: block; text-align: center; font-size: 16px; font-weight: bold; line-height: 40px;}
+.tab li.active>a{color: #ffffff}
+.tab_content{width: 380px; height: 140px; position: relative; background: #ffffff; border: 1px solid crimson;
+box-sizing: border-box; padding: 5px;}
+.tab_content .notice{position: absolute; background-color: #ffffff;}
+.tab_content .notice ul li{width: 360px; line-height: 150%;}
+.tab_content .notice ul li a{display: block; font-size: 14px; width: 280px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; float: left;}
+.tab_content .notice ul li span{display: block; font-size: 14px; width: 70px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; float: right;}
+.tab_content .gallery{position:  absolute; background-color: #ffffff;}
+.tab_content .gallery ul li{float: left; margin: 10px 5px;}
+.tab_content .gallery ul li a img{width: 100px;}
 
-.tab{width: 380px; height: 40px; }
-.tab ul li{width: 30%; height: 40px; float: left; background-color: #efefef; margin-right: 10px;;}
-.tab ul li a{display: block; font-size: 16px; text-align: center; line-height: 40px; z-index: 100;}
-.tab ul li.active{background-color: #ffffff; border: 1px solid #ff9326; box-sizing: border-box; border-bottom: none;
-; z-index: 100;}
-.tab_content{width: 370px; height: 130px; padding: 5px; position: relative; top: -1px; 
-border: 1px solid #ff9326; box-sizing: border-box; }
-.notice{background-color: #ffffff; position: absolute;} 
-.notice ul li{line-height: 180%;} 
-.notice ul li a{display: block; float: left; width: 250px; overflow: hidden; white-space: nowrap;
-text-overflow: ellipsis;} 
-.notice ul li span{display: block; float: right; width: 75px;} 
+.content .event li{float: left; margin: 0px 5px;}
 
-.gallery{background-color: #ffffff; position: absolute;}
-.gallery ul li{float: left; margin: 10px; width: 100px; height: 100px;}
-.gallery ul li a img{width: 100px; height: 100px;}
+footer{width: 1200px; height: 100px; background-color: #FFFFFF;}
+.f_logo{width: 200px; height: 40px; line-height: 100px; float: left;}
+.f_copy{width: 800px; float: left; margin-top: 20px;}
+.f_copy ul li{margin-left: 20px; font-size: 14px;}
+.f_sns{width: 200px; float: left; margin-top: 20px;}
+.f_sns ul li{float: right;}
+.f_sns ul li{background: url(../img/social_icon1.jpg) no-repeat;
+width: 50px; height: 30px; background-size: 100%;}
+.f_sns ul li.fackbook{ background-position: 0px -60px;}
+.f_sns ul li.twitter{ background-position: 0px -30px;}
+.f_sns ul li.youtube{ background-position: 0px -85px;}
 
-.event li{float: left; margin: 5px;}
-
-
-#footer{width: 1200px; margin: 0 auto; height: 100%;}
-.f_logo{float: left; width: 200px; margin-top: 25px;}
-.f_menu{float: left; width: 800px; height: 50px; }
-.f_menu ul li{float: left; width: 25%; line-height: 50px;}
-.f_menu ul li.point a{color: #ffffff;}
-.f_copy{float: left; width: 800px; height: 50px;}
-.f_copy ul li{float: left;}
-
-#pop{width: 100%; height: 100%; background-color: rgba(0,0,0,.4);
-position: absolute; left: 0; top: 0; display: none;}
-.pop_content{width: 400px; height: 600px; position: absolute;
-top: 50%; left: 50%; margin-left: -200px; margin-top: -300px; background-color: #ffffff;;}
-.pop_content h2{text-align: center; margin-top: 15px;}
-.pop_content h3{text-align: center; margin: 15px 0px;}
-.pop_content p{text-align: center; line-height: 200%; font-size: 16px;
-font-weight: bold;}
-.pop_content .button{position: absolute; bottom: 5px; right: 5px; width: 100px; height: 70px;
-line-height: 70px; text-align: center;}
+#popup{background: rgba(0,0,0,0.3); width: 100%; height: 100%; position: absolute;
+left: 0; top: 0; z-index: 100; display: none;}
+.pop{width: 400px; height: 500px; position: absolute; top: 50%; left: 50%; 
+margin-top: -250px; margin-left: -200px; background: #ffffff;}
+.pop h1, .pop h3, .pop p{text-align: center; line-height: 200%;}
+.pop .button{width: 100px; height: 60px; position: absolute; right: 5px;
+bottom: 5px;}
